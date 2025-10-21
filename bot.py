@@ -11,7 +11,7 @@ if not TOKEN or not CHAT_ID:
     raise SystemExit("Set TG_BOT_TOKEN and TG_CHAT_ID in environment variables")
 
 bot = telebot.TeleBot(TOKEN)
-app = Flask(name)
+app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
